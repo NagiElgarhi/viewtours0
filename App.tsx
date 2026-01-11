@@ -3,20 +3,17 @@ import React from 'react';
 
 /**
  * App Component
- * A minimalist interface designed to fulfill the user's request: 
- * A single button in the center of the screen with a specific title.
+ * واجهة بسيطة جداً تحتوي على زر واحد فقط برابط خارجي.
+ * تم تحديث الألوان لتكون مزيجاً من البرتقالي والأخضر الغامق.
  */
 const App: React.FC = () => {
-  // Replace the placeholder below with the specific link if one was provided in the prompt.
-  // Since the prompt mentioned "this link" without a literal URL, I'm using a placeholder 
-  // that the user can easily swap, or assuming they want a standard external link behavior.
   const targetUrl = "https://www.google.com/search?q=tourist+guide"; 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-orange-50 to-orange-100">
       <header className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-indigo-900 mb-2">دليلك السياحي</h1>
-        <p className="text-slate-600">اكتشف العالم بضغطة زر</p>
+        <h1 className="text-4xl font-bold text-emerald-900 mb-2">دليلك السياحي</h1>
+        <p className="text-orange-800 opacity-80">اكتشف وجهتك التالية</p>
       </header>
       
       <main className="flex items-center justify-center">
@@ -24,16 +21,16 @@ const App: React.FC = () => {
           href={targetUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative inline-flex items-center justify-center px-10 py-6 font-bold text-white transition-all duration-300 bg-indigo-600 font-pj rounded-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-700 active:scale-95 shadow-xl hover:shadow-indigo-200"
+          className="group relative inline-flex items-center justify-center px-12 py-6 font-bold text-white transition-all duration-300 bg-orange-600 rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald-700/20 hover:bg-orange-700 active:scale-95 shadow-2xl hover:shadow-orange-300/50 border-b-4 border-orange-800"
         >
-          <span className="text-2xl">افتح الدليل السياحي</span>
+          <span className="text-2xl">دليلك السياحي</span>
           
-          {/* Decorative effect */}
-          <div className="absolute inset-0 w-full h-full rounded-2xl bg-white opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"></div>
+          {/* تأثير تفاعلي عند تمرير الفأرة */}
+          <div className="absolute inset-0 w-full h-full rounded-xl bg-emerald-900 opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"></div>
         </a>
       </main>
 
-      <footer className="fixed bottom-8 text-slate-400 text-sm">
+      <footer className="fixed bottom-8 text-emerald-900/60 text-sm font-medium">
         &copy; {new Date().getFullYear()} دليلك السياحي
       </footer>
     </div>
